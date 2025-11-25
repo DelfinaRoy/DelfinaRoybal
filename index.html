@@ -2,29 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Delfina Roybal | Portfolio</title>
+  <title>Delfina Roybal · Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Portfolio of Delfina Roybal – communications strategist, researcher, and community organizer based in New York City."
+    content="Portfolio of Delfina Roybal – communications, branding, research, and Indigenous justice work in New York City."
+  />
+
+  <!-- Google Fonts: modern, clean, social-media friendly -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
   />
 
   <style>
-    /* ---------- GLOBAL ---------- */
     :root {
-      --bg: #05060a;
-      --bg-alt: #0d0f16;
-      --accent: #e94b7b;
-      --accent-soft: rgba(233, 75, 123, 0.12);
-      --text: #f7f7fb;
-      --muted: #a5a7b7;
-      --card: #11131d;
-      --border: #26293a;
-      --radius-lg: 18px;
-      --radius-xl: 26px;
-      --shadow-soft: 0 22px 45px rgba(0, 0, 0, 0.55);
-      --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.35);
-      --max-width: 1040px;
+      --bg: #f7f4ee;
+      --bg-soft: #f0ebe2;
+      --ink: #111111;
+      --ink-soft: #5c5c5c;
+      --accent: #a93f0d; /* terracotta */
+      --accent-soft: #f4d7c4;
+      --border: #e0dbd0;
+      --max-width: 1060px;
+      --radius-sm: 12px;
+      --radius-md: 18px;
     }
 
     * {
@@ -34,13 +38,10 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #141625 0, #05060a 55%);
-      color: var(--text);
-      line-height: 1.6;
-      padding: 0;
-      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
     }
 
     a {
@@ -53,14 +54,11 @@
       display: block;
     }
 
-    /* ---------- LAYOUT ---------- */
-
     .page {
       min-height: 100vh;
-      padding: 20px 16px 60px;
+      padding: 24px 18px 60px;
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      justify-content: center;
     }
 
     .shell {
@@ -68,391 +66,360 @@
       max-width: var(--max-width);
     }
 
-    /* ---------- NAV ---------- */
+    /* NAV */
 
     .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 8px 10px 0;
-      margin-bottom: 26px;
+      margin-bottom: 28px;
     }
 
     .nav-left {
       display: flex;
-      align-items: center;
-      gap: 10px;
+      align-items: baseline;
+      gap: 6px;
     }
 
-    .logo-pill {
-      width: 34px;
-      height: 34px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #ff96c5, #e94b7b);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    .brand-mark {
+      font-family: "Space Grotesk", system-ui, sans-serif;
       font-weight: 700;
       font-size: 18px;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .brand-text span:first-child {
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-    }
-
-    .brand-text span:last-child {
-      font-size: 11px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--muted);
-      letter-spacing: 0.16em;
+    }
+
+    .brand-sub {
+      font-size: 12px;
+      color: var(--ink-soft);
     }
 
     .nav-links {
       display: flex;
       gap: 18px;
-      font-size: 13px;
-      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .nav-links a {
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
     }
 
     .nav-links a:hover {
-      color: var(--text);
+      border-color: var(--ink);
     }
 
-    /* ---------- HERO ---------- */
+    /* HERO */
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
-      gap: 26px;
-      padding: 22px 18px 30px;
-      border-radius: var(--radius-xl);
-      background: linear-gradient(135deg, #11131f 0, #05060a 55%, #141627 100%);
-      box-shadow: var(--shadow-soft);
-      border: 1px solid rgba(255, 255, 255, 0.04);
-      margin-bottom: 32px;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+      gap: 28px;
+      padding: 32px 26px 30px;
+      border-radius: 26px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      margin-bottom: 40px;
     }
 
-    .hero-main-eyebrow {
+    .hero-eyebrow {
       font-size: 12px;
-      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 10px;
+      letter-spacing: 0.2em;
+      color: var(--ink-soft);
+      margin-bottom: 14px;
     }
 
     .hero h1 {
-      font-size: clamp(28px, 4vw, 38px);
-      line-height: 1.15;
-      margin-bottom: 10px;
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: clamp(32px, 5vw, 44px);
+      line-height: 1.05;
+      text-transform: uppercase;
+      margin-bottom: 12px;
     }
 
-    .hero-highlight {
-      display: inline-block;
-      background: linear-gradient(120deg, #ff93c2, #f6d365);
-      -webkit-background-clip: text;
-      color: transparent;
+    .hero h1 span {
+      display: block;
     }
 
-    .hero-subtitle {
+    .hero-sub {
       font-size: 14px;
-      color: var(--muted);
-      max-width: 36rem;
-      margin-bottom: 16px;
-    }
-
-    .hero-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+      max-width: 34rem;
+      color: var(--ink-soft);
       margin-bottom: 18px;
     }
 
-    .tag {
-      padding: 4px 10px;
+    .hero-meta {
+      font-size: 13px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
+      margin-bottom: 22px;
+    }
+
+    .hero-meta span {
+      padding: 4px 8px;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
       font-size: 11px;
-      color: var(--muted);
-      background: rgba(5, 6, 10, 0.8);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
     }
 
     .hero-cta-row {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      align-items: center;
     }
 
     .btn-primary {
-      padding: 9px 18px;
+      background: var(--ink);
+      color: #ffffff;
       border-radius: 999px;
-      background: linear-gradient(135deg, #ff96c5, #e94b7b);
-      border: none;
+      padding: 9px 20px;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 500;
+      border: 1px solid var(--ink);
       cursor: pointer;
-      color: #05060a;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.65);
-    }
-
-    .btn-primary span.icon {
-      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
     }
 
     .btn-ghost {
-      padding: 8px 14px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 12px;
-      cursor: pointer;
       background: transparent;
-      color: var(--muted);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 9px 16px;
+      font-size: 13px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
     }
 
-    .btn-ghost span.icon {
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
       font-size: 13px;
     }
 
-    .hero-aside {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      font-size: 12px;
-      color: var(--muted);
+    .hero-block {
+      background: var(--bg-soft);
+      border-radius: 20px;
+      padding: 16px 16px 14px;
+      border: 1px solid var(--border);
     }
 
-    .hero-card {
-      background: radial-gradient(circle at top left, #2a2441 0, #10121c 40%);
-      border-radius: 18px;
-      padding: 12px 13px;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      box-shadow: var(--shadow-subtle);
-    }
-
-    .hero-card-label {
-      font-size: 11px;
+    .hero-block h3 {
+      font-family: "Space Grotesk";
+      font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 0.16em;
-      color: rgba(165, 167, 183, 0.9);
-      margin-bottom: 4px;
+      margin-bottom: 8px;
     }
 
-    .hero-card-text {
-      font-size: 12px;
+    .hero-block p {
+      color: var(--ink-soft);
+      line-height: 1.5;
     }
 
-    .hero-stat-row {
-      display: flex;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .hero-stat {
-      flex: 1;
-      background: rgba(5, 6, 10, 0.75);
-      border-radius: 14px;
-      padding: 8px 10px;
-      border: 1px solid rgba(255, 255, 255, 0.04);
-    }
-
-    .hero-stat-value {
-      font-size: 16px;
-      font-weight: 600;
-    }
-
-    .hero-stat-label {
-      font-size: 11px;
-      color: var(--muted);
-    }
-
-    /* ---------- SECTION WRAPPER ---------- */
+    /* SECTIONS */
 
     section {
-      margin-bottom: 34px;
+      margin-bottom: 40px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--ink-soft);
+      margin-bottom: 4px;
     }
 
     .section-heading {
       display: flex;
-      justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 10px;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
     }
 
     .section-heading h2 {
-      font-size: 18px;
-      letter-spacing: 0.06em;
+      font-family: "Space Grotesk";
+      font-size: 20px;
       text-transform: uppercase;
+      letter-spacing: 0.18em;
     }
 
-    .section-heading span {
-      font-size: 12px;
-      color: var(--muted);
+    .section-heading p {
+      font-size: 13px;
+      color: var(--ink-soft);
+      max-width: 26rem;
     }
-
-    /* ---------- GRID CARDS ---------- */
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
     }
 
     .card {
-      background: var(--card);
-      border-radius: var(--radius-lg);
+      background: #ffffff;
+      border-radius: var(--radius-md);
       border: 1px solid var(--border);
-      padding: 14px 14px 12px;
-      box-shadow: var(--shadow-subtle);
+      padding: 16px 16px 14px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 10px;
     }
 
     .card-header {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
-      gap: 10px;
+      gap: 8px;
     }
 
     .card-title {
-      font-size: 14px;
-      font-weight: 600;
+      font-family: "Space Grotesk";
+      font-size: 15px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
     }
 
     .card-meta {
-      font-size: 11px;
-      color: var(--muted);
+      font-size: 12px;
+      color: var(--ink-soft);
+      margin-top: 4px;
     }
 
     .card-pill {
       font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
       padding: 3px 8px;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: var(--muted);
-      background: rgba(5, 6, 10, 0.85);
+      border: 1px solid var(--border);
+      background: var(--bg-soft);
       white-space: nowrap;
     }
 
     .card-body {
-      font-size: 12px;
-      color: var(--muted);
+      font-size: 13px;
+      color: var(--ink-soft);
     }
 
     .card-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-top: 2px;
+      margin-top: 6px;
     }
 
     .card-tag {
-      font-size: 10px;
-      padding: 2px 7px;
+      font-size: 11px;
+      padding: 3px 8px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      color: var(--muted);
+      border: 1px solid var(--border);
+      background: #faf7f2;
     }
 
-    /* ---------- SKILLS ---------- */
+    .case-image-row {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-    .skills-wrap {
+    .case-image-row img {
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background: #fdfbf7;
+    }
+
+    /* SKILLS */
+
+    .chip-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
     }
 
-    .skill-chip {
+    .chip {
       font-size: 11px;
       padding: 5px 10px;
       border-radius: 999px;
-      background: var(--accent-soft);
-      border: 1px solid rgba(233, 75, 123, 0.4);
+      border: 1px solid var(--border);
+      background: #ffffff;
     }
 
-    /* ---------- FOOTER / CONTACT ---------- */
+    /* CONTACT / FOOTER */
 
     .contact-card {
-      background: linear-gradient(135deg, #10121c, #181631);
-      border-radius: var(--radius-xl);
-      padding: 18px 18px 16px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: var(--shadow-soft);
+      background: #ffffff;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      padding: 18px 20px 16px;
       display: grid;
       grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
-      gap: 14px;
+      gap: 18px;
       align-items: center;
     }
 
     .contact-card h2 {
-      font-size: 18px;
-      margin-bottom: 4px;
+      font-family: "Space Grotesk";
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 8px;
     }
 
-    .contact-text {
+    .contact-card p {
       font-size: 13px;
-      color: var(--muted);
+      color: var(--ink-soft);
       max-width: 32rem;
     }
 
     .contact-meta {
       display: flex;
       flex-direction: column;
-      gap: 6px;
-      font-size: 12px;
-      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
     }
 
-    .pill-link {
-      font-size: 12px;
+    .contact-link {
       padding: 7px 12px;
       border-radius: 999px;
-      background: rgba(5, 6, 10, 0.85);
-      border: 1px solid rgba(255, 255, 255, 0.14);
+      border: 1px solid var(--border);
+      background: var(--bg-soft);
     }
 
     .footer-note {
       text-align: center;
       font-size: 11px;
-      color: var(--muted);
+      color: var(--ink-soft);
       margin-top: 18px;
     }
 
-    /* ---------- RESPONSIVE ---------- */
+    /* RESPONSIVE */
 
     @media (max-width: 780px) {
-      .hero,
-      .contact-card {
-        grid-template-columns: minmax(0, 1fr);
+      .nav-links {
+        display: none;
       }
 
       .hero {
-        padding: 18px 14px 20px;
+        grid-template-columns: minmax(0, 1fr);
+        padding: 22px 18px 20px;
       }
 
-      .nav {
-        padding-inline: 4px;
-      }
-
-      .nav-links {
-        display: none;
+      .contact-card {
+        grid-template-columns: minmax(0, 1fr);
       }
     }
   </style>
@@ -464,15 +431,14 @@
       <!-- NAV -->
       <header class="nav">
         <div class="nav-left">
-          <div class="logo-pill">D</div>
-          <div class="brand-text">
-            <span>Delfina Roybal</span>
-            <span>Comms · Research · Justice</span>
+          <div>
+            <div class="brand-mark">Delfina Roybal</div>
+            <div class="brand-sub">Communications · Branding · Research · NYC / Lenapehoking</div>
           </div>
         </div>
         <nav class="nav-links">
           <a href="#work">Work</a>
-          <a href="#events">Events</a>
+          <a href="#branding">Branding</a>
           <a href="#research">Research</a>
           <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
@@ -482,76 +448,55 @@
       <!-- HERO -->
       <section class="hero" id="top">
         <div>
-          <div class="hero-main-eyebrow">Communications · Research · Indigenous Justice</div>
+          <div class="hero-eyebrow">Portfolio · 2025</div>
           <h1>
-            Strategist, organizer, and
-            <span class="hero-highlight">storyteller in Lenapehoking.</span>
+            <span>COMMUNICATIONS,</span>
+            <span>BRANDING &</span>
+            <span>INDIGENOUS JUSTICE</span>
+            <span>IN NEW YORK CITY.</span>
           </h1>
-          <p class="hero-subtitle">
-            I’m a communications manager, political science student at Columbia, and community organizer
-            working at the intersections of Indigenous justice, tech, and law. I build campaigns, events,
-            and research that move people toward action.
+          <p class="hero-sub">
+            I’m a communications manager, political science student at Columbia, and community organizer.
+            I design campaigns, events, and visual systems for Indigenous organizations and justice work in Lenapehoking.
           </p>
-
-          <div class="hero-tags">
-            <span class="tag">Urban Indigenous Collective</span>
-            <span class="tag">Political Science · Columbia</span>
-            <span class="tag">MMIWGT2S+ Advocacy</span>
-            <span class="tag">Comms &amp; Design</span>
+          <div class="hero-meta">
+            <span>Urban Indigenous Collective</span>
+            <span>Branding · Social · Events</span>
+            <span>MMIWGT2S+ Advocacy</span>
           </div>
-
           <div class="hero-cta-row">
-            <a href="#work">
-              <button class="btn-primary">
-                <span class="icon">✶</span>
-                <span>View selected work</span>
-              </button>
-            </a>
-            <a href="#contact">
-              <button class="btn-ghost">
-                <span class="icon">➝</span>
-                <span>Get in touch</span>
-              </button>
-            </a>
+            <a href="#work"><button class="btn-primary">View selected work</button></a>
+            <a href="#contact"><button class="btn-ghost">Get in touch</button></a>
           </div>
         </div>
 
-        <aside class="hero-aside">
-          <div class="hero-card">
-            <div class="hero-card-label">About</div>
-            <div class="hero-card-text">
-              Communications strategist, researcher, and community organizer based in New York City.
-              I work across digital campaigns, policy research, and event production with a focus on Indigenous
-              health, sovereignty, and visibility.
-            </div>
-            <div class="hero-stat-row">
-              <div class="hero-stat">
-                <div class="hero-stat-value">9+ yrs</div>
-                <div class="hero-stat-label">client &amp; community work</div>
-              </div>
-              <div class="hero-stat">
-                <div class="hero-stat-value">3+ lanes</div>
-                <div class="hero-stat-label">comms · research · organizing</div>
-              </div>
-            </div>
+        <aside class="hero-right">
+          <div class="hero-block">
+            <h3>Currently</h3>
+            <p>
+              Communications & Marketing Manager at <strong>Urban Indigenous Collective</strong>.
+              Building campaigns, events, and visual identities for Indigenous health, wellness, and sovereignty in NYC.
+            </p>
           </div>
-
-          <div class="hero-card">
-            <div class="hero-card-label">Current roles</div>
-            <div class="hero-card-text">
-              <strong>Communications &amp; Marketing Manager</strong> at Urban Indigenous Collective ·
-              Political Science student at Columbia University · Real estate agent &amp; bartender navigating
-              New York with community at the center.
-            </div>
+          <div class="hero-block">
+            <h3>Also</h3>
+            <p>
+              Political Science at Columbia · Researching predictive policing, surveillance, and liberalism ·
+              Long-time New York real estate + service work, bringing a very real-world lens to strategy and storytelling.
+            </p>
           </div>
         </aside>
       </section>
 
-      <!-- WORK / COMMS -->
+      <!-- SELECTED WORK -->
       <section id="work">
+        <div class="section-label">Selected work</div>
         <div class="section-heading">
-          <h2>Communications &amp; Marketing</h2>
-          <span>Campaigns · Strategy · Digital storytelling</span>
+          <h2>COMMUNICATIONS & CAMPAIGNS</h2>
+          <p>
+            A mix of event campaigns, social media work, and communications strategy for Indigenous organizations,
+            legal collectives, and community partners.
+          </p>
         </div>
 
         <div class="grid">
@@ -559,17 +504,18 @@
             <div class="card-header">
               <div>
                 <div class="card-title">Urban Indigenous Collective</div>
-                <div class="card-meta">Communications &amp; Marketing Manager · 2023–present</div>
+                <div class="card-meta">Communications & Marketing Manager · 2023–present</div>
               </div>
-              <span class="card-pill">Lead role</span>
+              <span class="card-pill">Lead Comms</span>
             </div>
             <div class="card-body">
-              Lead organizational communications across social, email, web, and press. Build strategies, content
-              calendars, and analytics systems that center Indigenous community health and visibility in NYC.
+              Running digital strategy, newsletters, social media, and event comms for UIC. Work includes
+              multi-day summits, Indigenous Peoples Day nightlife events, canoeing experiences, and community
+              education programs.
               <div class="card-tags">
-                <span class="card-tag">Digital strategy</span>
-                <span class="card-tag">Email &amp; social</span>
-                <span class="card-tag">Brand narrative</span>
+                <span class="card-tag">Strategy</span>
+                <span class="card-tag">Social Media</span>
+                <span class="card-tag">Event Comms</span>
               </div>
             </div>
           </article>
@@ -577,39 +523,19 @@
           <article class="card">
             <div class="card-header">
               <div>
-                <div class="card-title">MMIWGT2S+ NYC Summit Comms</div>
-                <div class="card-meta">Urban Indigenous Collective · 2025</div>
+                <div class="card-title">MMIWGT2S+ NYC Summit</div>
+                <div class="card-meta">Communications & Run-of-Show · 2025</div>
               </div>
-              <span class="card-pill">Event campaign</span>
+              <span class="card-pill">Summit</span>
             </div>
             <div class="card-body">
-              Designed and executed communications for a multi-day summit including water prayer, vigil, and
-              prayer walk. Produced outreach materials, event copy, and visual assets to honor survivors and
-              families while mobilizing attendees.
+              Built the comms plan and run-of-show for a three-part summit featuring a water prayer,
+              vigil, and prayer walk from Central Park Pond to Times Square, centering survivors
+              and families of missing and murdered Indigenous relatives.
               <div class="card-tags">
-                <span class="card-tag">Event comms</span>
-                <span class="card-tag">Community care</span>
-                <span class="card-tag">Print &amp; digital</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Indigenous Peoples Day Beyond Borders</div>
-                <div class="card-meta">House of Yes · 2024–2025</div>
-              </div>
-              <span class="card-pill">Festival</span>
-            </div>
-            <div class="card-body">
-              Co-led communications and marketing for an Indigenous-centered nightlife and cultural experience.
-              Managed vendor and performer promotion, created graphics, and crafted messaging around the
-              theme “Rez to the Barrio to the Borough.”
-              <div class="card-tags">
-                <span class="card-tag">Nightlife &amp; culture</span>
-                <span class="card-tag">Visual design</span>
-                <span class="card-tag">Community partnerships</span>
+                <span class="card-tag">MMIWGT2S+</span>
+                <span class="card-tag">Program Design</span>
+                <span class="card-tag">Community Care</span>
               </div>
             </div>
           </article>
@@ -618,87 +544,90 @@
             <div class="card-header">
               <div>
                 <div class="card-title">Water Protector Legal Collective</div>
-                <div class="card-meta">Comms &amp; Research Intern · 2024 &amp; 2025</div>
+                <div class="card-meta">Comms & Research · 2024 & 2025</div>
               </div>
-              <span class="card-pill">Legal advocacy</span>
+              <span class="card-pill">Legal Advocacy</span>
             </div>
             <div class="card-body">
-              Supported environmental and Indigenous rights cases through research and communications.
-              Drafted public-facing materials, built narrative frameworks, and translated complex legal issues
-              into accessible language for communities and supporters.
+              Supporting climate and Indigenous rights work with research and public-facing communications.
+              Translating legal cases and movement history into accessible narratives for communities and supporters.
               <div class="card-tags">
-                <span class="card-tag">Legal comms</span>
-                <span class="card-tag">Climate justice</span>
-                <span class="card-tag">Research &amp; writing</span>
+                <span class="card-tag">Legal Comms</span>
+                <span class="card-tag">Climate Justice</span>
+                <span class="card-tag">Research</span>
               </div>
             </div>
           </article>
         </div>
       </section>
 
-      <!-- EVENTS -->
-      <section id="events">
+      <!-- BRANDING CASE STUDIES -->
+      <section id="branding">
+        <div class="section-label">Branding & Visual Direction</div>
         <div class="section-heading">
-          <h2>Event Production &amp; Organizing</h2>
-          <span>Summits · Trainings · Cultural gatherings</span>
+          <h2>BRAND SYSTEMS & SOCIAL ASSETS</h2>
+          <p>
+            Visual identities and social media pieces built for Indigenous-led retreats, wellness spaces,
+            and community events in Lenapehoking and Shinnecock homelands.
+          </p>
         </div>
 
         <div class="grid">
+          <!-- Retreat branding -->
           <article class="card">
             <div class="card-header">
               <div>
-                <div class="card-title">MMIWGT2S+ NYC East Coast Summit</div>
-                <div class="card-meta">Run-of-show &amp; comms lead · 2025</div>
+                <div class="card-title">Back to Body, Back to Land</div>
+                <div class="card-meta">Retreat Branding · Moskehtu Consulting × UIC</div>
               </div>
-              <span class="card-pill">Flagship</span>
+              <span class="card-pill">Retreat Series</span>
             </div>
             <div class="card-body">
-              Developed the communications plan and run-of-show for a three-part summit including a water prayer,
-              candlelight vigil, and prayer walk from Central Park Pond to Times Square. Coordinated messaging,
-              logistics, and visual identity with community leaders and families.
+              Visual identity and social media graphics for a free Indigenous-led healing retreat series on
+              Shinnecock waters. Imagery centers hands, shoreline, and plant medicine to ground the work in land,
+              water, and embodied care.
               <div class="card-tags">
-                <span class="card-tag">Program design</span>
-                <span class="card-tag">Logistics</span>
-                <span class="card-tag">Community engagement</span>
+                <span class="card-tag">Event Branding</span>
+                <span class="card-tag">Social Media</span>
+                <span class="card-tag">Land-Based Healing</span>
+              </div>
+              <div class="case-image-row">
+                <img src="retreat-1.jpg" alt="Retreat main promo" style="flex:1 1 260px;">
+                <img src="retreat-2.jpg" alt="Retreat promo with hands" style="flex:1 1 260px;">
+                <img src="retreat-3.jpg" alt="Retreat event schedule" style="flex:1 1 260px;">
+                <img src="retreat-4.jpg" alt="About Chenae Bullock graphic" style="flex:1 1 260px;">
+                <img src="retreat-5.jpg" alt="Who is it for graphic" style="flex:1 1 260px;">
               </div>
             </div>
           </article>
 
+          <!-- Wellness Room branding -->
           <article class="card">
             <div class="card-header">
               <div>
-                <div class="card-title">Guided Canoeing Experiences</div>
-                <div class="card-meta">Shinnecock Nation Waters · 2025</div>
+                <div class="card-title">UIC Wellness Room</div>
+                <div class="card-meta">Brand Guidelines · Visual System</div>
               </div>
-              <span class="card-pill">Cultural program</span>
+              <span class="card-pill">Wellness Space</span>
             </div>
             <div class="card-body">
-              Collaborated on messaging and participant materials for canoe journeys exploring the cultural and
-              ecological significance of Shinnecock waters. Assisted with outreach, framing, and post-event
-              survey design.
+              Developed a full brand system for the Wellness Room at Urban Indigenous Collective: logo usage,
+              typography, and color palette drawn from sky, clay, and plant medicine. The visuals match the vision
+              of a space where modern therapy and ancestral practices sit side by side.
               <div class="card-tags">
-                <span class="card-tag">Land &amp; water</span>
-                <span class="card-tag">Cultural education</span>
-                <span class="card-tag">Evaluation</span>
+                <span class="card-tag">Brand Guidelines</span>
+                <span class="card-tag">Typography & Color</span>
+                <span class="card-tag">Community Care</span>
               </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Know Your Rights Trainings</div>
-                <div class="card-meta">Urban Indigenous Collective · Ongoing</div>
-              </div>
-              <span class="card-pill">Workshop</span>
-            </div>
-            <div class="card-body">
-              Helped design and facilitate trainings on policing, ICE encounters, and community safety. Produced
-              accessible materials grounded in care, clarity, and practical tools for participants.
-              <div class="card-tags">
-                <span class="card-tag">Curriculum</span>
-                <span class="card-tag">Public education</span>
-                <span class="card-tag">Facilitation</span>
+              <div class="case-image-row">
+                <img src="wellness-1.jpg" alt="Wellness Room cover branding"
+                     style="flex:1 1 260px;">
+                <img src="wellness-2.jpg" alt="What is the Wellness Center"
+                     style="flex:1 1 260px;">
+                <img src="wellness-3.jpg" alt="Wellness Room vision"
+                     style="flex:1 1 260px;">
+                <img src="wellness-4.jpg" alt="Wellness typography and colors"
+                     style="flex:1 1 260px;">
               </div>
             </div>
           </article>
@@ -707,9 +636,13 @@
 
       <!-- RESEARCH -->
       <section id="research">
+        <div class="section-label">Research & Writing</div>
         <div class="section-heading">
-          <h2>Research &amp; Policy Writing</h2>
-          <span>Tech · Carceral systems · Indigenous politics</span>
+          <h2>POLITICAL THEORY & DATA WORK</h2>
+          <p>
+            Academic work that sits behind the comms: predictive policing, surveillance, survey research,
+            and Indigenous-focused public opinion in NYC.
+          </p>
         </div>
 
         <div class="grid">
@@ -717,18 +650,18 @@
             <div class="card-header">
               <div>
                 <div class="card-title">Can a Liberal State Justify Predictive Policing?</div>
-                <div class="card-meta">Political Theory · 17-page paper</div>
+                <div class="card-meta">Political Theory Paper · 17 pages</div>
               </div>
-              <span class="card-pill">In-depth</span>
+              <span class="card-pill">Theory</span>
             </div>
             <div class="card-body">
-              Argues that predictive policing undermines liberal commitments to autonomy, due process, and neutrality
-              by operationalizing structural injustice through data and algorithms. Draws on Rawls, Raz, Iris Marion
-              Young, Kymlicka, and Parekh.
+              Argues that predictive policing undermines autonomy, due process, and neutrality by turning structural
+              injustice into data and code. Draws on Rawls, Raz, Iris Marion Young, Kymlicka, and Parekh while
+              engaging current policing technologies.
               <div class="card-tags">
                 <span class="card-tag">Surveillance</span>
                 <span class="card-tag">Liberalism</span>
-                <span class="card-tag">Algorithmic bias</span>
+                <span class="card-tag">Carceral Tech</span>
               </div>
             </div>
           </article>
@@ -736,38 +669,19 @@
           <article class="card">
             <div class="card-header">
               <div>
-                <div class="card-title">Algorithmic Governance &amp; Carceral Tech</div>
-                <div class="card-meta">Research agenda · Ongoing</div>
+                <div class="card-title">Indigenous Policy Platforms & Candidate Warmth</div>
+                <div class="card-meta">Survey Research · Qualtrics & R</div>
               </div>
-              <span class="card-pill">Long-term</span>
+              <span class="card-pill">Methods</span>
             </div>
             <div class="card-body">
-              Examines systems like Palantir, Clearview AI, LexisNexis, and “ImmigrationOS” as extensions of state
-              power and racialized control. Focuses on Indigenous data sovereignty, surveillance capitalism, and
-              legal accountability.
+              Designed a survey instrument measuring how Indigenous-focused policies affect voter warmth toward
+              candidates in New York City. Built scales, randomization, and skip logic based on ANES standards
+              and analyzed data in R.
               <div class="card-tags">
-                <span class="card-tag">Tech &amp; law</span>
-                <span class="card-tag">Data sovereignty</span>
-                <span class="card-tag">Carceral state</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-header">
-              <div>
-                <div class="card-title">Survey Research: Indigenous Civic Engagement</div>
-              <div class="card-meta">POLS 3720 · Columbia University</div>
-              </div>
-              <span class="card-pill">Quantitative</span>
-            </div>
-            <div class="card-body">
-              Designed a Qualtrics survey instrument to study how Indigenous-focused policy platforms shape candidate
-              warmth and support in NYC. Includes skip logic, randomization, and scale construction modeled on ANES.
-              <div class="card-tags">
-                <span class="card-tag">Survey design</span>
-                <span class="card-tag">Public opinion</span>
-                <span class="card-tag">Quant methods</span>
+                <span class="card-tag">Survey Design</span>
+                <span class="card-tag">Quant Methods</span>
+                <span class="card-tag">NYC Politics</span>
               </div>
             </div>
           </article>
@@ -776,26 +690,27 @@
 
       <!-- SKILLS -->
       <section id="skills">
+        <div class="section-label">Skills</div>
         <div class="section-heading">
-          <h2>Skills &amp; Tools</h2>
-          <span>What I work with day to day</span>
+          <h2>HOW I WORK</h2>
+          <p>
+            Strategy, design, and research all in one: from decks and social calendars to brand systems and data analysis.
+          </p>
         </div>
 
-        <div class="skills-wrap">
-          <span class="skill-chip">Communications strategy</span>
-          <span class="skill-chip">Campaign planning</span>
-          <span class="skill-chip">Social media management</span>
-          <span class="skill-chip">Copywriting &amp; editing</span>
-          <span class="skill-chip">Event production</span>
-          <span class="skill-chip">Community organizing</span>
-          <span class="skill-chip">Research &amp; policy analysis</span>
-          <span class="skill-chip">Survey design (Qualtrics)</span>
-          <span class="skill-chip">R for data analysis</span>
-          <span class="skill-chip">Mailchimp &amp; analytics</span>
-          <span class="skill-chip">Canva &amp; visual design</span>
-          <span class="skill-chip">Public speaking &amp; facilitation</span>
-          <span class="skill-chip">Real estate &amp; client work</span>
-          <span class="skill-chip">Spanish (heritage speaker, intermediate)</span>
+        <div class="chip-row">
+          <span class="chip">Communications Strategy</span>
+          <span class="chip">Social Media Management</span>
+          <span class="chip">Branding & Visual Direction</span>
+          <span class="chip">Event Production</span>
+          <span class="chip">Community Organizing</span>
+          <span class="chip">Copywriting & Editing</span>
+          <span class="chip">Survey Design (Qualtrics)</span>
+          <span class="chip">R for Data Analysis</span>
+          <span class="chip">Mailchimp & Analytics</span>
+          <span class="chip">Client & Real Estate Work</span>
+          <span class="chip">Public Speaking & Facilitation</span>
+          <span class="chip">Spanish (heritage speaker)</span>
         </div>
       </section>
 
@@ -803,20 +718,19 @@
       <section id="contact">
         <div class="contact-card">
           <div>
-            <h2>Let’s connect.</h2>
-            <p class="contact-text">
-              I’m open to roles and collaborations in communications, policy, research, and Indigenous justice —
-              especially work that bridges tech, law, and community. Reach out for speaking, consulting, campaigns,
-              or just to say hi.
+            <h2>CONTACT</h2>
+            <p>
+              Open to roles and collaborations in communications, branding, research, and Indigenous justice work —
+              especially projects rooted in NYC / Lenapehoking, tech and law, or community-based events and campaigns.
             </p>
           </div>
           <div class="contact-meta">
-            <a class="pill-link" href="mailto:delfinaroybalconsulting@gmail.com">delfinaroybalconsulting@gmail.com</a>
-            <a class="pill-link" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="pill-link" href="#" target="_blank" rel="noreferrer">Download CV (PDF)</a>
+            <!-- replace these with your real links -->
+            <a class="contact-link" href="mailto:youremail@example.com">youremail@example.com</a>
+            <a class="contact-link" href="#" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="contact-link" href="#" target="_blank" rel="noreferrer">Download CV (PDF)</a>
           </div>
         </div>
-
         <div class="footer-note">
           Built by Delfina · coded by hand · living and working in Lenapehoking.
         </div>
